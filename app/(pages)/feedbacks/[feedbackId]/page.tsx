@@ -64,7 +64,7 @@ function Page() {
                     <tbody className="divide-y divide-gray-200">
                         {
                             feedbacks && feedbacks.map(feedback => (
-                                <tr>
+                                <tr key={feedback.uuid}>
                                     <td className="whitespace-nowrap px-4 py-2 text-gray-700">{formatDateTime(feedback.createdAt)}</td>
                                     <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{feedback.customerName}</td>
                                     <td className="whitespace-nowrap px-4 py-2 text-gray-700">{feedback.customerFeedback}</td>

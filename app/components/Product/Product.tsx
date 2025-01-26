@@ -8,7 +8,7 @@ type ProductProps = {
 
 export const Product = ({ data }: ProductProps) => {
     return (
-        <div className="sm:w-1/2 md:w-1/3 lg:w-1/3 p-2" id={data.uuid}>
+        <div className="sm:w-1/2 md:w-1/3 lg:w-1/3 p-2" key={data.uuid}>
             <article
                 className="rounded-lg border border-gray-100 bg-[#d8dddf] p-4 pb-3 shadow-sm transition hover:shadow-lg sm:p-3"
             >

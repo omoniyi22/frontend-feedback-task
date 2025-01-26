@@ -61,8 +61,10 @@ function Page() {
                 !switchTab ?
                     < div className="flex flex-wrap mt-8 shadow">
                         {products && products.length > 0 ?
-                            products && products.map(({ cost, name, feedbacks, uuid }) =>
-                                <Product data={{ cost, name, feedbacks, uuid }}/>
+                            products && products.map(({ cost, name, feedbacks, uuid }, index) =>
+                                <div key={index}>
+                                    <Product data={{ cost, name, feedbacks, uuid }} />
+                                </div>
                             )
                             :
                             <div className="text-center">There is no product for now, please create a new product</div>
